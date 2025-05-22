@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Maker</title>
+    <link rel="stylesheet" href="../css/todo.CSS">
+</head>
+<body>
+    <main>
+        <div id="buttons" class="collapsed2ndRow">
+            <form id="form">
+            <h1>CREA UNA CARD</h1>
+            <div>
+                <input type="text" name="title" id="inputTitle" placeholder="Titolo">
+                <textarea type="text" name="description" id="inputDescription" placeholder="description"></textarea>
+                <input type="date" name="deadline" id="inputDeadline" placeholder="deadline">
+                <select name="categoryId" id="selectCategory">
+                </select>
+            </div>
+            <button type="button" id="ButtonSubmit">CREA</button>
+            </form>
+            <div id="searchMethods">
+                <button id="ToggleFinished">Show finished</button>
+                <button id="ToggleSearchByDate">Search by date</button>
+            </div>
+            
+            <form id="searchByDateForm" class="hidden">
+                <div>
+                    <input type="date" name="pre" id="inputDatePre" placeholder="after...">
+                    <input type="date" name="post" id="inputDatePost" placeholder="before...">
+                    <select name="kindOfSearchForDate" id="searchDateButton">
+                        <option id="deadLineSearchOption" value="DL">By deadline</option>
+                        <option id="creationDateSearchOption" value="CD">By date of creation</option>
+                    </select>
+                </div>
+                <button type="button">Search</button>
+            </form>
+        </div>
+        <div id="CardList"></div>
+    </main>
+    <script src="../js/TODO.js"></script>
+</body>
+</html>
