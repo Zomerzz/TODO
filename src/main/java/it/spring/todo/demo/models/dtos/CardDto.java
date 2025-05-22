@@ -28,6 +28,7 @@ public class CardDto {
         this.completed = ended;
         this.categoryId = categoryId;
     }
+    //a
 
     static public CardDto toDto(Card card){
         return new CardDto(card.getCardId(),card.getTitle(),card.getDescription(),card.getCreationDate(),card.getDeadline(),card.getCompletedDate(),card.isState(),card.getCategory().getCategoryId());
